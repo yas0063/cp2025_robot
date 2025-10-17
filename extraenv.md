@@ -182,14 +182,14 @@ cd /Users/hoge/Desktop/robot_sample
 その後
 
 ```
- gcc main1.c -o main1 -L. -lrobo_mac -lm -lpthread -lglut -framework OpenGL 
+ gcc main1.c -o main1 -L. -lrobo_mac -lm -lpthread -lglut -lGL
 ```
 
 とすることで，コンパイルできます．windows(msys2)とはちょっとコンパイルオプションが異なることに注意．
 
 M1やM2 mac(ARM Mac)の場合で上手くいかない場合は，
 ```
- gcc main1.c -o main1 -L. -L/opt/homebrew/lib -lrobo_mac -lm -lpthread -lglut -framework OpenGL 
+ gcc main1.c -o main1 -L. -L/opt/homebrew/lib -lrobo_mac -lm -lpthread -lglut -lGL 
 ```
 と，`-L/opt/homebrew/lib`をオプションに追加してください．
 
@@ -198,11 +198,11 @@ M1やM2 mac(ARM Mac)の場合で上手くいかない場合は，
 
 librobo2を使うときは，
 ```
- gcc main1.c -o main1 -L. -lrobo2_mac -lm -lpthread -lglut -framework OpenGL 
+ gcc main1.c -o main1 -L. -lrobo2_mac -lm -lpthread -lglut -lGL 
 ```
 になります．M1やM2 mac(ARM Mac)の場合は，
 ```
- gcc main1.c -o main1 -L. -L/opt/homebrew/lib -lrobo2_mac -lm -lpthread -lglut -framework OpenGL 
+ gcc main1.c -o main1 -L. -L/opt/homebrew/lib -lrobo2_mac -lm -lpthread -lglut -lGL 
 ```
 になります．
 
