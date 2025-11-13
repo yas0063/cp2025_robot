@@ -102,24 +102,30 @@
 
 重量計測か整列かの課題達成状況で，場合分けしましょう．
 
-#### update_robot()関数の使用について
+**Important: update_robot()関数の使用方法**
 
-update_robot()は，main関数内でのみ使用してください．自作関数内で呼び出すことは禁止します．ただし，main関数内では，複数のwhileループに分けて使用してもかまいません．
+- update_robot()は，main関数内でのみ使用すること
+- 自作関数内で呼び出すことは禁止
+- main関数内では，複数のwhileループに分けて使用してもよい
 
-良い例：main関数内で複数のwhileループを使用
-```
+【良い例】
+```c
+// main関数内
+// 重量計測用のループ
 while(update_robot()) {
     // 重量計測処理
 }
+
+// 物体配置用のループ
 while(update_robot()) {
     // 物体配置処理
 }
 ```
 
-悪い例：自作関数内でupdate_robot()を使用
-```
+【悪い例】
+```c
 void my_function() {
-    while(update_robot()) {
+    while(update_robot()) {  // ← 自作関数内での使用は禁止
         // 処理
     }
 }
