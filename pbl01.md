@@ -186,6 +186,15 @@ set_command_move_arm_to(pos)は，posを中心としたある範囲にアーム�
 
 <img width="500" alt="長方形軌道" src="./image/movement_square2.png">
 
+**入力部分は以下のコードを使用してください：**
+
+```c
+// Input coordinates of point A and C
+Position posA, posC;
+printf("Enter x, y of point A and x, y of point C: ");
+scanf("%lf %lf %lf %lf", &posA.x, &posA.y, &posC.x, &posC.y);
+```
+
 #### ヒント
 
 - `robot_simulator.h`内にも記載されていますが，アームの可動範囲は`x`, `y`ともに`-1.0 ~ 1.0`内の正方形平面内です．
@@ -213,5 +222,4 @@ CLE上のレポートbox
 
 締め切りは，次回講義開始時刻まで．
 
-- 1・2組：1/10 8:50
-- 3・4組：1/20 13:30
+- 1/8 13:30
