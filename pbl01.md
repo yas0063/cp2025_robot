@@ -188,8 +188,8 @@ set_command_move_arm_to(pos)は，posを中心としたある範囲にアーム�
 
 **入力部分は以下のコードを使用してください：**
 
-```c
-// Input coordinates of point A and C
+```
+/* Input coordinates of point A and C */
 Position posA, posC;
 printf("Enter x, y of point A and x, y of point C: ");
 scanf("%lf %lf %lf %lf", &posA.x, &posA.y, &posC.x, &posC.y);
