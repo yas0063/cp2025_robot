@@ -186,10 +186,8 @@ set_command_move_arm_to(pos)は，posを中心としたある範囲にアーム�
 
 <img width="500" alt="長方形軌道" src="./image/movement_square2.png">
 
-**入力部分は以下のコードを使用してください：**
-
+入力部分は以下のコードを使用してください：
 ```
-/* Input coordinates of point A and C */
 Position posA, posC;
 printf("Enter x, y of point A and x, y of point C: ");
 scanf("%lf %lf %lf %lf", &posA.x, &posA.y, &posC.x, &posC.y);
